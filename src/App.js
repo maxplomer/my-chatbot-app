@@ -7,7 +7,11 @@ class App extends Component {
     super(props);
     this.state = {
       date: new Date(),
-      messages: ["helloworld1234", "testing999"]
+      messages: [
+        {author: "bot", text: "helloworld1234"},
+        {author: "bot", text: "helloworld5678"},
+        {author: "bot", text: "helloworld9012"}
+      ]
     };
     this.textInput = React.createRef();
     this.submitChatForm = this.submitChatForm.bind(this);
@@ -18,7 +22,7 @@ class App extends Component {
     let messages = this.state.messages;
     let newMessage = this.textInput.current.value;
     this.textInput.current.value = "";
-    messages.push(newMessage);
+    messages.push({author: "user", text:newMessage});
     this.setState({
       messages: messages
     });
@@ -32,7 +36,7 @@ class App extends Component {
       <div className="App">
         {this.state.date.toString()}
         {this.state.messages.map(function(message, index) {
-          return (<div key={index}>{message}</div>);
+          return (<div key={index}>{message.text}</div>);
         })}
         <form onSubmit={this.submitChatForm}>
           <input type="text" ref={this.textInput} required style={textInputStyle}/>
