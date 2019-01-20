@@ -1,14 +1,14 @@
 {
-  "main.css": "/my-chatbot-app/static/css/main.afdf74c7.chunk.css",
-  "main.js": "/my-chatbot-app/static/js/main.a133a815.chunk.js",
-  "main.js.map": "/my-chatbot-app/static/js/main.a133a815.chunk.js.map",
+  "main.css": "/my-chatbot-app/static/css/main.d38f8aca.chunk.css",
+  "main.js": "/my-chatbot-app/static/js/main.df19c97d.chunk.js",
+  "main.js.map": "/my-chatbot-app/static/js/main.df19c97d.chunk.js.map",
   "static/js/1.76b6102a.chunk.js": "/my-chatbot-app/static/js/1.76b6102a.chunk.js",
   "static/js/1.76b6102a.chunk.js.map": "/my-chatbot-app/static/js/1.76b6102a.chunk.js.map",
   "runtime~main.js": "/my-chatbot-app/static/js/runtime~main.b9b7aa1c.js",
   "runtime~main.js.map": "/my-chatbot-app/static/js/runtime~main.b9b7aa1c.js.map",
   "static/media/logo.svg": "/my-chatbot-app/static/media/logo.5d5d9eef.svg",
-  "static/css/main.afdf74c7.chunk.css.map": "/my-chatbot-app/static/css/main.afdf74c7.chunk.css.map",
+  "static/css/main.d38f8aca.chunk.css.map": "/my-chatbot-app/static/css/main.d38f8aca.chunk.css.map",
   "index.html": "/my-chatbot-app/index.html",
-  "precache-manifest.bd11d49a9948c8992ef328e31bf40a09.js": "/my-chatbot-app/precache-manifest.bd11d49a9948c8992ef328e31bf40a09.js",
+  "precache-manifest.e48c08bb7cf14f91b1995b8022d0b63b.js": "/my-chatbot-app/precache-manifest.e48c08bb7cf14f91b1995b8022d0b63b.js",
   "service-worker.js": "/my-chatbot-app/service-worker.js"
 }
