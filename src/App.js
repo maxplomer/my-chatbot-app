@@ -19,13 +19,38 @@ class App extends Component {
 
   submitChatForm(event) {
     event.preventDefault();
+
+    //Add user message to state
     let messages = this.state.messages;
-    let newMessage = this.textInput.current.value;
+    let userMessage = this.textInput.current.value;
     this.textInput.current.value = "";
-    messages.push({author: "user", text: newMessage});
+    messages.push({author: "user", text: userMessage});
     this.setState({
       messages: messages
     });
+
+    //Call chatbot
+    let chatbotReponse = this.callChatbot(userMessage);
+    switch(chatbotReponse.action) {
+      case 'showContactForm':
+
+        break;
+      case 'showCreateProjectForm':
+
+        break;
+      case 'showPortfolioSlideshow':
+
+        break;
+      default:
+        messages.push({author: "bot", text: chatbotReponse.botMessage});
+        this.setState({
+          messages: messages
+        });
+    }
+  }
+
+  callChatbot(userMessage) {
+    return {botMessage: "this is the bot message", action: null}; //
   }
 
   render() {
