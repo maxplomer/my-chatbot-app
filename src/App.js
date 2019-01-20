@@ -22,6 +22,8 @@ class App extends Component {
     console.log('the component mounted');
     //create instance of chatbot module
 
+    //is this scope ok? or just do this.Chatbot =
+    const myChatbot = new Chatbot();
 
   }
 

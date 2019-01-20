@@ -4,3 +4,5 @@ class Chatbot {
     return {botMessage: "this is the bot message", action: null};
   }
 }
+
+export default Chatbot;
