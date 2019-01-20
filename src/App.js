@@ -9,6 +9,17 @@ class App extends Component {
       date: new Date(),
       messages: ["helloworld1234", "testing999"]
     };
+
+    this.submitChatForm = this.submitChatForm.bind(this);
+  }
+
+  submitChatForm(event) {
+    event.preventDefault();
+    var messages = this.state.messages;
+    messages.push("another message");
+    this.setState({
+      messages: messages
+    });
   }
 
   render() {
@@ -18,6 +29,10 @@ class App extends Component {
         {this.state.messages.map(function(message, index) {
           return (<div key={index}>{message}</div>);
         })}
+        <form onSubmit={this.submitChatForm}>
+          <input required />
+          <button type="submit">Send</button>
+        </form>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
