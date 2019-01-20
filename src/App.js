@@ -17,6 +17,11 @@ class App extends Component {
     this.submitChatForm = this.submitChatForm.bind(this);
   }
 
+  componentDidMount() {
+    console.log('the component mounted');
+    //create instance of chatbot module
+  }
+
   submitChatForm(event) {
     event.preventDefault();
 
