@@ -1,6 +1,7 @@
 
 .bot {
   text-align: left;
+  margin-left: 50px;
 }
 
 .bot > span {
@@ -11,6 +12,7 @@
 
 .user {
   text-align: right;
+  margin-right: 50px;
 }
 
 .App {
