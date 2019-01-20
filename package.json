@@ -1,5 +1,6 @@
 {
   "name": "my-chatbot-app",
+  "homepage": "https://maxplomer.github.io/my-chatbot-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
