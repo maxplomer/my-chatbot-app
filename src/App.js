@@ -8,9 +8,9 @@ class App extends Component {
     this.state = {
       date: new Date(),
       messages: [
-        {author: "bot", text: "helloworld1234"},
-        {author: "bot", text: "helloworld5678"},
-        {author: "bot", text: "helloworld9012"}
+        {author: "bot", text: "helloworld1234 🤖"},
+        {author: "user", text: "helloworld5678"},
+        {author: "bot", text: "helloworld9012 🤖"}
       ]
     };
     this.textInput = React.createRef();
@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   render() {
-    var textInputStyle = {width: '50%', padding: '5px'};
+    var textInputStyle = {width: '50%', padding: '5px', marginTop: '20px'};
     var sendButtonStyle = {padding: '5px 10px', marginLeft: '10px', cursor: 'pointer'};
     var messageStyle = {padding: '5px 10px'};
 
@@ -37,7 +37,7 @@ class App extends Component {
       <div className="App">
         {this.state.date.toString()}
         {this.state.messages.map(function(message, index) {
-          return (<div key={index} className={message.author} style={messageStyle}>{message.text}</div>);
+          return (<div key={index} className={message.author} style={messageStyle}><span>{message.text}</span></div>);
         })}
         <form onSubmit={this.submitChatForm}>
           <input type="text" ref={this.textInput} required style={textInputStyle}/>

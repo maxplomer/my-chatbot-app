@@ -1,16 +1,17 @@
 
 .bot {
   text-align: left;
+}
+
+.bot > span {
   background: rgb(103, 218, 249);
-  width: 50%;
+  border-radius: 5px;
+  padding: 1px 2px;
 }
 
 .user {
   text-align: right;
 }
-
-
-
 
 .App {
   text-align: center;
