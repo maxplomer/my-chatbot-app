@@ -9,20 +9,25 @@ class App extends Component {
       date: new Date(),
       messages: ["helloworld1234", "testing999"]
     };
-
+    this.textInput = React.createRef();
     this.submitChatForm = this.submitChatForm.bind(this);
   }
 
   submitChatForm(event) {
     event.preventDefault();
-    var messages = this.state.messages;
-    messages.push("another message");
+    let messages = this.state.messages;
+    let newMessage = this.textInput.current.value;
+    this.textInput.current.value = "";
+    messages.push(newMessage);
     this.setState({
       messages: messages
     });
   }
 
   render() {
+    var textInputStyle = {width: '50%', padding: '5px'};
+    var sendButtonStyle = {padding: '5px 10px', marginLeft: '10px', cursor: 'pointer'};
+
     return (
       <div className="App">
         {this.state.date.toString()}
@@ -30,8 +35,8 @@ class App extends Component {
           return (<div key={index}>{message}</div>);
         })}
         <form onSubmit={this.submitChatForm}>
-          <input required />
-          <button type="submit">Send</button>
+          <input type="text" ref={this.textInput} required style={textInputStyle}/>
+          <button type="submit" style={sendButtonStyle}>Send</button>
         </form>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
