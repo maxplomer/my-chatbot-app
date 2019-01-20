@@ -16,10 +16,7 @@ class App extends Component {
     };
     this.textInput = React.createRef();
     this.submitChatForm = this.submitChatForm.bind(this);
-  }
-
-  componentDidMount() {
-    this.Chatbot = new Chatbot();
+    this.chatbot = new Chatbot();
   }
 
   submitChatForm(event) {
@@ -35,7 +32,7 @@ class App extends Component {
     });
 
     //Call chatbot
-    let chatbotReponse = this.Chatbot.talk(userMessage);
+    let chatbotReponse = this.chatbot.talk(userMessage);
 
     switch(chatbotReponse.action) {
       case 'showContactForm':
