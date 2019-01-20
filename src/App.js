@@ -3,9 +3,21 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: new Date(),
+      messages: ["helloworld1234", "testing999"]
+    };
+  }
+
   render() {
     return (
       <div className="App">
+        {this.state.date.toString()}
+        {this.state.messages.map(function(message, index) {
+          return (<div key={index}>{message}</div>);
+        })}
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
