@@ -22,7 +22,7 @@ class App extends Component {
     let messages = this.state.messages;
     let newMessage = this.textInput.current.value;
     this.textInput.current.value = "";
-    messages.push({author: "user", text:newMessage});
+    messages.push({author: "user", text: newMessage});
     this.setState({
       messages: messages
     });
@@ -31,12 +31,13 @@ class App extends Component {
   render() {
     var textInputStyle = {width: '50%', padding: '5px'};
     var sendButtonStyle = {padding: '5px 10px', marginLeft: '10px', cursor: 'pointer'};
+    var messageStyle = {padding: '5px 10px'};
 
     return (
       <div className="App">
         {this.state.date.toString()}
         {this.state.messages.map(function(message, index) {
-          return (<div key={index}>{message.text}</div>);
+          return (<div key={index} className={message.author} style={messageStyle}>{message.text}</div>);
         })}
         <form onSubmit={this.submitChatForm}>
           <input type="text" ref={this.textInput} required style={textInputStyle}/>

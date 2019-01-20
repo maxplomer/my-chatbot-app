@@ -1,3 +1,17 @@
+
+.bot {
+  text-align: left;
+  background: rgb(103, 218, 249);
+  width: 50%;
+}
+
+.user {
+  text-align: right;
+}
+
+
+
+
 .App {
   text-align: center;
 }
