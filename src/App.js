@@ -19,12 +19,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('the component mounted');
-    //create instance of chatbot module
-
-    //is this scope ok? or just do this.Chatbot =
-    const myChatbot = new Chatbot();
-
+    this.Chatbot = new Chatbot();
   }
 
   submitChatForm(event) {
@@ -40,7 +35,8 @@ class App extends Component {
     });
 
     //Call chatbot
-    let chatbotReponse = this.callChatbot(userMessage);
+    let chatbotReponse = this.Chatbot.talk(userMessage);
+
     switch(chatbotReponse.action) {
       case 'showContactForm':
 
@@ -57,11 +53,6 @@ class App extends Component {
           messages: messages
         });
     }
-  }
-
-  callChatbot(userMessage) {
-    return {botMessage: "this is the bot message", action: null};
-    //Chatbot.talk(userMessage);
   }
 
   render() {
