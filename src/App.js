@@ -56,7 +56,7 @@ class App extends Component {
   }
 
   render() {
-    var textInputStyle = {width: '50%', padding: '5px', marginTop: '20px'};
+    var textInputStyle = {width: '50%', padding: '5px', margin: '20px 0'};
     var sendButtonStyle = {padding: '5px 10px', marginLeft: '10px', cursor: 'pointer'};
     var messageStyle = {padding: '5px 10px'};
 
@@ -73,15 +73,15 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Max Plomer Chatbot App
           </p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://maxplomer.github.io"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Portfolio
           </a>
         </header>
       </div>
