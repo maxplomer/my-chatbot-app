@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Chatbot from './Chatbot'
 
 class App extends Component {
   constructor(props) {
@@ -20,6 +21,8 @@ class App extends Component {
   componentDidMount() {
     console.log('the component mounted');
     //create instance of chatbot module
+
+
   }
 
   submitChatForm(event) {
@@ -55,7 +58,8 @@ class App extends Component {
   }
 
   callChatbot(userMessage) {
-    return {botMessage: "this is the bot message", action: null}; //
+    return {botMessage: "this is the bot message", action: null};
+    //Chatbot.talk(userMessage);
   }
 
   render() {
