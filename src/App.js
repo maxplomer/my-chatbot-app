@@ -9,17 +9,15 @@ class App extends Component {
     this.state = {
       date: new Date(),
       messages: [
-        {author: "bot", text: "helloworld1234 🤖"},
-        {author: "user", text: "helloworld5678"},
-        {author: "bot", text: "helloworld9012 🤖"}
+        {author: "bot", text: "How can I help you? 🤖"},
+        //{author: "user", text: "helloworld5678"},
+        {author: "bot", text: "This is Max Plomer's chatbot 🤖"},
+        {author: "bot", text: "Would you like to contact me, create a new project or see a slideshow or portfolio projects? 🤖"}
       ]
     };
     this.textInput = React.createRef();
     this.submitChatForm = this.submitChatForm.bind(this);
-  }
-
-  componentDidMount() {
-    this.Chatbot = new Chatbot();
+    this.chatbot = new Chatbot();
   }
 
   submitChatForm(event) {
@@ -30,16 +28,13 @@ class App extends Component {
     let userMessage = this.textInput.current.value;
     this.textInput.current.value = "";
     messages.push({author: "user", text: userMessage});
-    this.setState({
-      messages: messages
-    });
 
     //Call chatbot
-    let chatbotReponse = this.Chatbot.talk(userMessage);
+    let chatbotReponse = this.chatbot.talk(userMessage);
 
     switch(chatbotReponse.action) {
       case 'showContactForm':
-
+        this.showContactForm();
         break;
       case 'showCreateProjectForm':
 
@@ -48,11 +43,16 @@ class App extends Component {
 
         break;
       default:
-        messages.push({author: "bot", text: chatbotReponse.botMessage});
-        this.setState({
-          messages: messages
-        });
+
     }
+    messages.push({author: "bot", text: chatbotReponse.botMessage});
+    this.setState({
+      messages: messages
+    });
+  }
+
+  showContactForm() {
+    setTimeout(function() {alert('show contact form')}, 2000);
   }
 
   render() {
